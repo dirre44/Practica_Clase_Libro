@@ -10,7 +10,8 @@ while True:
           1. Ingresar un libro
           2. Buscar libro por genero
           3. Recomendar libro
-          4. Salir                      
+          4. ver libros cargados
+          5. Salir                      
     """)
     opcion = input("Ingrese una opcion: ")
 
@@ -25,12 +26,16 @@ while True:
         print(f"El libro {libro_nuevo.titulo} fue ingresado correctamente")
     
     elif opcion == "2": #buscar por genero
-        pass
+        genero_busqueda = input("Que genero desea buscar?: ")
+        libros_en_genero = [libro.titulo for libro in lista_libros if libro.genero.lower() == genero_busqueda.lower()]
 
     elif opcion == "3": #recomendar libro
         pass
 
-    elif opcion == "4": #salir del programa
+    elif opcion == "4": #ver todos los libros
+        pass
+
+    elif opcion == "5": #salir del programa
         break
 
     else: #no se ingreso una opcion valida
